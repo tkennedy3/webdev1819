@@ -1,5 +1,30 @@
-<style>
-    .japan{
-        font-family: sans-serif;
-    }
-</style>
+.japan{
+    font-family: monospace;
+    color:red;
+}
+.iceland{
+    font-family: cursive;
+    color: #0042ad;
+}
+.sweden{
+    font-family: fantasy;
+    color: #FFD700;
+}
+.greece{
+    font-family: arial;
+    color:#309eff;
+}
+.ireland{
+    font-family: georgia;
+    color:green;
+}
+.row{
+    display:flex;
+}
+.column{
+    flex:25%;
+    padding:5px;
+}
+body{
+    background-color: #C6C6C6;
+}
