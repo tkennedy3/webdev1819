@@ -1,0 +1,57 @@
+body{
+    background-color: #696969;
+}
+.title{
+    text-align: center;
+    color: white;
+    border-color: white;
+    border-style:solid;
+    border-radius: 12px;
+    font-family: "Courier New", Courier, monospace;
+}
+.dance{
+    background-color: #f0f8ff;
+    color:#696969;
+    padding: 15px 32px;
+    font-size: 25px;
+    border-radius: 12px;
+    font-family: "Courier New", Courier, monospace;
+}
+.ukulele{
+    background-color: #e6e6fa;
+    color:#696969;
+    padding: 15px 32px;
+    font-size:25px;
+    border-radius: 12px;
+    font-family: "Courier New", Courier, monospace;
+}
+.mythology{
+    background-color: #f0fff0;
+    color:#696969;
+    padding: 15px 32px;
+    font-size:25px;
+    border-radius: 12px;
+    font-family: "Courier New", Courier, monospace;
+}
+#buttons{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.row{
+    display:flex;
+}
+.column {
+  width: 33.33%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+}
+.image{
+    color:white;
+    border: dashed;
+    border-bottom-color: white;
+    border-top-color: white;
+    border-left-color: black;
+    border-right-color:black;
+}
