@@ -38,14 +38,15 @@ body{
     align-items:center;
     justify-content:center;
 }
-.row{
-    display:flex;
-}
 .column {
-  width: 33.33%;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 30px;
+  float: left;
+  width: 33%;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 .image{
     color:white;
@@ -54,4 +55,31 @@ body{
     border-top-color: white;
     border-left-color: black;
     border-right-color:black;
+}
+.row2{
+    display:flex;
+}
+.column2{
+    width:50%;
+    padding:5%;
+}
+#facts{
+    color:white;
+    border:dotted;
+}
+#hobbies{
+    color:white;
+     border:dotted;
+}
+h3{
+    text-align:center;
+     border:dashed;
+     border-radius: 12px;
+}
+.caption{
+    border: dashed;
+    border-bottom-color: black;
+    border-top-color: black;
+    border-right-color: white;
+    border-left-color: white;
 }
