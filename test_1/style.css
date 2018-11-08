@@ -1,0 +1,68 @@
+h1{
+    color:orange;
+}
+body{
+    font-family: Helvetica;
+    background-color: white;
+}
+.feature{
+    color:red;
+}
+.main{
+    background-color: #ADD8E6;
+    border-radius: 20px;
+    box-shadow: 10px 10px;
+}
+section{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.section1{
+    border: dotted 3px;
+    border-color: green;
+}
+.section2{
+    border: dotted 3px;
+    border-color: green;
+}
+.section3{
+    border: dotted 3px;
+    border-color: green;
+}
+.penguin{
+    border: dotted 3px;
+    border-color: green;
+    background-image: url(http://goo.gl/e2x4ZK);
+    background-repeat: no-repeat;
+}
+.section4{
+    border: dotted 3px;
+    border-color: green;
+}
+.primary{
+    background-color:yellow;
+}
+.noindent{
+    margin-left:0px;
+}
+.pink{
+    background-color:pink;
+}
+.aqua{
+    background-color: #7FFFD4;
+}
+.lemon{
+    background-color: #fff44f;
+}
+.grape{
+    background-color: #6f2da8;
+}
+.inline{
+    float:left;
+    padding-left: 3px;
+}
+span{
+    text-decoration: line-through;
+    font-size:50%;
+    font-weight:normal;
+}
