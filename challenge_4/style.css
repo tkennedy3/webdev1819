@@ -7,6 +7,7 @@ body{
 .jumbotron{
     background-color: #CCCBC6;
 }
-.form-inline{
-    float:left;
+.navbar{
+    margin:0px;
+    float: right;
 }
