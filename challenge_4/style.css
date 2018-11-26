@@ -3,11 +3,11 @@ body{
 }
 .card{
     background-color: #EFD9C1;
+    margin: 0 auto; 
+    float: none; 
+    margin-bottom: 10px;
 }
 .jumbotron{
     background-color: #CCCBC6;
-}
-.navbar{
-    margin:0px;
-    float: right;
+    font-family: "Courier New", Courier, monospace;
 }
