@@ -1,0 +1,26 @@
+h1{
+    text-align: center; 
+}
+.w3-top{
+    color:#494E6B;
+}
+.card{
+    margin: 0 auto; 
+    float: none; 
+    margin-bottom: 10px;
+    background-color: #98878F;
+}
+.w3-container{
+    background-color: #494E6B;
+    color: white;
+}
+.bandpics{
+    width: 14em;
+}
+h4{
+    text-align: center;
+    color:white;
+}
+.bandtext{
+    color:white;
+}

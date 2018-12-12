@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<head>
+    <!--meta charset="UTF-8"-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+<body>
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="nabarthing">
+         <div class="w3-bar w3-card w3-left-align w3-large w3-gray">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black"><img src="images/patd2.png" alt="logo"></a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">Albums</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">Members</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">Tours</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">History</a>
+        </div>
+      </div>
+    
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-bar-block w3-grey w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">Albums</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">Members</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">Tours</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">History</a>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1>Panic! at the Disco</h1> 
+      </div>
+    </div>
+    
+    <!-- First Grid -->
+    <div class="w3-container">
+      <div class="w3-content">
+          <h1>Albums</h1>
+          <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="images/PFTW.jpg" alt="Pray for the Wicked">
+                      <div class="card-body">
+                        <h5 class="card-title">Pray for the Wicked</h5>
+                        <p class="card-text">
+                          2018
+                           blah blah
+                          <br>
+                          <!-- modal -->
+                          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">
+                            Read More
+                          </button>
+                          <div class="modal" id="myModal">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h4 class="modal-title"><img src="images/PFTW.jpg" alt="Pray for the Wicked" style="width: 18em;"></h4>
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                  This is information about the 2018 album, Pray for the Wicked
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end of modal -->
+                        </p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="images/DOAB.jpg" alt="Death of a Bachelor">
+                      <div class="card-body">
+                        <h5 class="card-title">Death of a Bachelor</h5>
+                        <p class="card-text">
+                          2016
+                          blah blah blah
+                          <br>
+                          <!-- modal -->
+                          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">
+                            Read More
+                          </button>
+                          <div class="modal" id="myModal">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h4 class="modal-title"><img src="images/DOAB.jpg" alt="Death of a Bachelor" style="width: 18em;"></h4>
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                  info info info info
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end of modal -->
+                        </p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="images/TWTLTRTD.png" alt="Too Weird to Live, Too Rare to Die!">
+                      <div class="card-body">
+                        <h5 class="card-title">Too Weird to Live, Too Rare to Die!</h5>
+                        <p class="card-text">
+                          2013
+                         <br>
+                          <!-- modal -->
+                          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">
+                            Read More
+                          </button>
+                          <div class="modal" id="myModal">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h4 class="modal-title"><img src="images/TWTLTRTD.png" alt="Too Weird to Live, Too Rare to Die!" style="width: 18em;"></h4>
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                  info info
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end of modal -->
+                        </p>
+                      </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+            <div class="w3-container">
+              <div class="w3-content">
+                <div class="row">
+                <div class="col-lg-4">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="images/VV.jpg" alt="Vices and Virtues">
+                      <div class="card-body">
+                        <h5 class="card-title">Vices and Virtues</h5>
+                        <p class="card-text">
+                          2011
+                          <br>
+                          <!-- modal -->
+                          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">
+                            Read More
+                          </button>
+                          <div class="modal" id="myModal">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h4 class="modal-title"><img src="images/VV.jpg" alt="Vices and Virtues" style="width: 18em;"></h4>
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                  info info info info
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end of modal -->
+                        </p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="images/PO.jpg" alt="Pretty. Odd.">
+                      <div class="card-body">
+                        <h5 class="card-title">Pretty. Odd.</h5>
+                        <p class="card-text">
+                          2008
+                          <br>
+                          <!-- modal -->
+                          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">
+                            Read More
+                          </button>
+                          <div class="modal" id="myModal">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h4 class="modal-title"><img src="images/PO.jpg" alt="Pretty. Odd." style="width: 18em;"></h4>
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                  info info info info
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end of modal -->
+                        </p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="images/AFYCSO.jpg" alt="A Fever You Can't Sweat Out">
+                      <div class="card-body">
+                        <h5 class="card-title">A Fever You Can't Sweat Out</h5>
+                        <p class="card-text">
+                          2005
+                          <br>
+                          <!-- modal -->
+                          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">
+                            Read More
+                          </button>
+                          <div class="modal" id="myModal">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h4 class="modal-title"><img src="images/AFYCSO.jpg" alt="A Fever You Can't Sweat Out" style="width: 18em;"></h4>
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                  info info info info
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end of modal -->
+                        </p>
+                      </div>
+                    </div>
+                </div>
+          </div>
+      </div>
+    </div>
+    
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+      <div class="w3-content">
+        <h1>Members</h1>
+        <div class="w3-third w3-center">
+          <img src="images/brendonurie.jpg" alt="Brendon Urie" class="bandpics">
+        </div>
+        <div class="w3-twothird">
+          <h4>Brendon Urie</h4>
+          <p class="bandtext">(2004-PRESENT) FILLER TEXT MY DUDE</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-row-padding w3-padding-64 w3-container">
+      <div class="w3-content">
+        <div class="w3-twothird">
+          <h4>Ryan Ross</h4>
+          <p class="bandtext">(2004-2009) FILLER TEXT MY DUDE</p>
+        </div>
+        <div class="w3-third w3-center">
+          <img src="#" alt="Ryan Ross" class="bandpics">
+        </div>
+      </div>
+    </div>
+    <div class="w3-row-padding w3-padding-64 w3-container">
+      <div class="w3-content">
+        <div class="w3-third w3-center">
+          <img src="#" alt="Dallon Weekes" class="bandpics">
+        </div>
+        <div class="w3-twothird">
+          <h4>Dallon Weekes</h4>
+          <p class="bandtext">(2010-2015) FILLER TEXT MY DUDE</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-row-padding w3-padding-64 w3-container">
+      <div class="w3-content">
+        <div class="w3-twothird">
+          <h4>Jon Walker</h4>
+          <p class="bandtext">(2006-2009) FILLER TEXT MY DUDE</p>
+        </div>
+        <div class="w3-third w3-center">
+          <img src="#" alt="Jon Walker" class="bandpics">
+        </div>
+      </div>
+    </div>
+    <div class="w3-row-padding w3-padding-64 w3-container">
+      <div class="w3-content">
+        <div class="w3-third w3-center">
+          <img src="#" alt="Spencer Smith" class="bandpics">
+        </div>
+        <div class="w3-twothird">
+          <h4>Spencer Smith</h4>
+          <p class="bandtext">(2004-2015) FILLER TEXT MY DUDE</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-containe w3-row-padding w3-padding-64">
+      <h1>Tours</h1>
+      <!-- carousel-->
+      <div id="demo" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/patdtour2.jpg" alt="tourpic">
+        </div>
+        <div class="carousel-item">
+          <img src="images/patdtour3.jpg" alt="tourpic">
+        </div>
+        <div class="carousel-item">
+          <img src="images/tour4.jpg" alt="tourpic">
+        </div>
+      </div>
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+    <!--end-->
+    <p style="text-align:center;">P!ATD has been on (fill in number here) tours overall. Ever since their release of the song "Girls/Girls/Boys", it has become tradtion at their concerts for fans to hold different colored hearts while the song is playing, showing love and support towards the LGBTQ+ community.</p>
+    </div>
+    <div class="w3-row-padding w3-padding-64 w3-container">
+      <div class="w3-content">
+        <h1>A Brief History</h1>
+        <ul style="list-style-type:none">
+          <li>2004-2005</li>
+          <ul style="list-style-type:none">
+            <li>The band is formed by highschool friends and is originall a Blink-182 cover band. Pete Wentz helps get them signed a record label and were soon to release their first album, "A Fever You Can't Sweat Out".</li>
+          </ul>
+          <li>2005-2007</li>
+          <ul style="list-style-type:none">
+            <li>"A Fever You Can't Sweat Out" is released September 27, 2005, and by 2006 the band announces a tour. Original bassist, Brent Wilson is kicked out of the band. Their next tour, dubbed "Nothing Rhymes with Circus", began in November 2006.</li>
+          </ul>
+          <li>2007-2009</li>
+          <ul style="list-style-type:none">
+            <li>"Pretty. Odd." is released on March 21, 2008. They went on another tour near the end of 2008. "...Live in Chicago" is released December 2, 2008.</li>
+          </ul>
+          <li>2009-2012</li>
+          <ul style="list-style-type:none">
+            <li>Ryan Ross and Jon Walker leave the band. "Vices and Virtues" is released March 22, 2011. P!ATD goes on the "Vices and Virtues Tour" in February 2011.</li>
+          </ul>
+          <li>2012-2015</li>
+          <ul style="list-style-type:none">
+            <li>"Too Weird to Live, Too Rare to Die" is released on October 8, 2013. Spencer Smith leaves the band to deal with his drug abuse.</li>
+          </ul>
+          <li>2015-2017</li>
+          <ul style="list-style-type:none">
+            <li>infooo</li>
+          </ul>
+          <li>2017-Present</li>
+          <ul style="list-style-type:none">
+            <li>infooo</li>
+          </ul>
+        </ul>
+      </div>
+    </div>  
+</body>
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+  <div class="w3-xlarge w3-padding-32">
+    <a href="https://www.facebook.com/panicatthedisco/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/panicatthedisco/?hl=en"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://twitter.com/PanicAtTheDisco?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+ </div>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
