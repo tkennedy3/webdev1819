@@ -7,13 +7,9 @@
         <script language = "javascript">
             var canvasElement = document.querySelector("#myCanvas");
             var context = canvasElement.getContext("2d");
-            //var angle = 20;
-               // context.rotate(angle * Math.PI / 180);
-                //for(var i = 0, i < 360, i++ ){
-                  //  angle + 1;
-               // }
- // figure out why I can't do a for loop (because that's weird) and then use a for loop to rotate the screen around for animation
-            function drawT(){
+            var deltaX = 0;
+            var deltaY = 0;
+           function drawT(){
                 context.clearRect(0, 0, canvasElement.width, canvasElement.height);
                 context.beginPath();
                 context.rect(25 + deltaX, 25 + deltaY, 150, 50);
@@ -23,14 +19,14 @@
                 context.fill();
     
                 context.beginPath();
-                context.rect(75 + deltaX, 25 + deltaY, 50, 150);
+                context.rect(75+ deltaX, 25+ deltaY, 50, 150);
                 context.closePath();
     
                 context.fillStyle = "#51DCFF";
                 context.fill();
             }
+            drawT();
             function drawK(){
-                context.clearRect(0, 0, canvasElement.width, canvasElement.height);
                 context.beginPath();
                 context.moveTo(200 + deltaX, 250 + deltaY);
                 context.lineTo(200 + deltaX, 350 + deltaY);
@@ -49,8 +45,7 @@
                 context.fillStyle = "#FFCC00";
                 context.fill();
             }
-            var deltaX = 0;
-            var deltaY = 0;
+            drawK();
             window.addEventListener("keydown", moveSomething, false);
             function moveSomething(e) {
                 switch(e.keyCode) {
@@ -68,9 +63,6 @@
                         break;
                             }   
                     }
-            drawT();
-            drawK();
-         </script>
          </script>
     </body>
 </html>
