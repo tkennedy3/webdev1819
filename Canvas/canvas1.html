@@ -7,40 +7,69 @@
         <script language = "javascript">
             var canvasElement = document.querySelector("#myCanvas");
             var context = canvasElement.getContext("2d");
-        
-                context.rotate(20 * Math.PI / 180);
-            
+            //var angle = 20;
+               // context.rotate(angle * Math.PI / 180);
+                //for(var i = 0, i < 360, i++ ){
+                  //  angle + 1;
+               // }
+ // figure out why I can't do a for loop (because that's weird) and then use a for loop to rotate the screen around for animation
+            function drawT(){
+                context.clearRect(0, 0, canvasElement.width, canvasElement.height);
                 context.beginPath();
-                context.rect(25, 25, 150, 50);
+                context.rect(25 + deltaX, 25 + deltaY, 150, 50);
                 context.closePath();
                 
                 context.fillStyle = "#51DCFF";
                 context.fill();
     
                 context.beginPath();
-                context.rect(75, 25, 50, 150);
+                context.rect(75 + deltaX, 25 + deltaY, 50, 150);
                 context.closePath();
     
                 context.fillStyle = "#51DCFF";
                 context.fill();
-                
+            }
+            function drawK(){
+                context.clearRect(0, 0, canvasElement.width, canvasElement.height);
                 context.beginPath();
-                context.moveTo(200, 250);
-                context.lineTo(200, 350);
-                context.lineTo(300, 350);
+                context.moveTo(200 + deltaX, 250 + deltaY);
+                context.lineTo(200 + deltaX, 350 + deltaY);
+                context.lineTo(300 + deltaX, 350 + deltaY);
                 context.closePath();
     
                 context.fillStyle = "#FFCC00";
                 context.fill();
                 
                 context.beginPath();
-                context.moveTo(200, 300);
-                context.lineTo(200, 200);
-                context.lineTo(300, 200);
+                context.moveTo(200 + deltaX, 300 + deltaY);
+                context.lineTo(200 + deltaX, 200 + deltaY);
+                context.lineTo(300 + deltaX, 200 + deltaY);
                 context.closePath();
     
                 context.fillStyle = "#FFCC00";
                 context.fill();
+            }
+            var deltaX = 0;
+            var deltaY = 0;
+            window.addEventListener("keydown", moveSomething, false);
+            function moveSomething(e) {
+                switch(e.keyCode) {
+                    case 37:
+                        deltaX -= 2;
+                        break;
+                    case 38:
+                        deltaY -= 2;
+                        break;
+                    case 39:
+                        deltaX += 2;
+                        break;
+                    case 40:
+                        deltaY += 2;
+                        break;
+                            }   
+                    }
+            drawT();
+            drawK();
          </script>
          </script>
     </body>
