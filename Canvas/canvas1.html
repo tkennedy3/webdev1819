@@ -7,39 +7,63 @@
         <script language = "javascript">
             var canvasElement = document.querySelector("#myCanvas");
             var context = canvasElement.getContext("2d");
-            var deltaX = 0;
-            var deltaY = 0;
-           function drawT(){
+
+            	// set up initial variables
+        	var c = document.getElementById("myCanvas");
+        	var ctx = c.getContext("2d");
+         
+            ctx.beginPath();
+            ctx.moveTo(100,0);
+            ctx.lineTo(100,200);
+            ctx.stroke();
+
+//function drawCircle(x){
+ // ctx.beginPath();
+ // ctx.arc(x,100,10,0,2*Math.PI);
+ // ctx.fillStyle="red";
+ // ctx.fill();
+//}
+var x = 0;
+setInterval(function(){ 
+  drawT(x%400);
+  x++;
+}, 25);
+var x2 = 0;
+setInterval(function(){ 
+  drawK(x2%400);
+  x2++;
+}, 25);
+           function drawT(x){
                 context.clearRect(0, 0, canvasElement.width, canvasElement.height);
                 context.beginPath();
-                context.rect(25 + deltaX, 25 + deltaY, 150, 50);
+                context.rect(x, 25, 150, 50);
                 context.closePath();
                 
                 context.fillStyle = "#51DCFF";
                 context.fill();
     
                 context.beginPath();
-                context.rect(75+ deltaX, 25+ deltaY, 50, 150);
+                context.rect(x + 50, 25, 50, 150);
                 context.closePath();
     
                 context.fillStyle = "#51DCFF";
                 context.fill();
             }
             drawT();
-            function drawK(){
+            function drawK(x2){
                 context.beginPath();
-                context.moveTo(200 + deltaX, 250 + deltaY);
-                context.lineTo(200 + deltaX, 350 + deltaY);
-                context.lineTo(300 + deltaX, 350 + deltaY);
+                context.moveTo(x2, 250 );
+                context.lineTo(x2 , 350 );
+                context.lineTo(x2 + 100 , 350 );
                 context.closePath();
     
                 context.fillStyle = "#FFCC00";
                 context.fill();
                 
                 context.beginPath();
-                context.moveTo(200 + deltaX, 300 + deltaY);
-                context.lineTo(200 + deltaX, 200 + deltaY);
-                context.lineTo(300 + deltaX, 200 + deltaY);
+                context.moveTo(x2 , 300 );
+                context.lineTo(x2 , 200 );
+                context.lineTo(x2 + 100 , 200 );
                 context.closePath();
     
                 context.fillStyle = "#FFCC00";
