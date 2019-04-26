@@ -16,23 +16,16 @@
             ctx.moveTo(100,0);
             ctx.lineTo(100,200);
             ctx.stroke();
-
-//function drawCircle(x){
- // ctx.beginPath();
- // ctx.arc(x,100,10,0,2*Math.PI);
- // ctx.fillStyle="red";
- // ctx.fill();
-//}
-var x = 0;
-setInterval(function(){ 
-  drawT(x%400);
-  x++;
-}, 25);
-var x2 = 0;
-setInterval(function(){ 
-  drawK(x2%400);
-  x2++;
-}, 25);
+            var x = 0;
+            setInterval(function(){ 
+              drawT(x%400);
+              x++;
+            }, 25);
+            var x2 = 0;
+            setInterval(function(){ 
+              drawK(x2%400);
+              x2++;
+            }, 25);
            function drawT(x){
                 context.clearRect(0, 0, canvasElement.width, canvasElement.height);
                 context.beginPath();
@@ -49,7 +42,6 @@ setInterval(function(){
                 context.fillStyle = "#51DCFF";
                 context.fill();
             }
-            drawT();
             function drawK(x2){
                 context.beginPath();
                 context.moveTo(x2, 250 );
@@ -69,25 +61,6 @@ setInterval(function(){
                 context.fillStyle = "#FFCC00";
                 context.fill();
             }
-            drawK();
-            window.addEventListener("keydown", moveSomething, false);
-            function moveSomething(e) {
-                switch(e.keyCode) {
-                    case 37:
-                        deltaX -= 2;
-                        break;
-                    case 38:
-                        deltaY -= 2;
-                        break;
-                    case 39:
-                        deltaX += 2;
-                        break;
-                    case 40:
-                        deltaY += 2;
-                        break;
-                            }   
-                    }
-            //why won't this work???????? u g h 
          </script>
          </canvas>
     </body>
