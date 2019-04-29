@@ -11,6 +11,7 @@
     <body>
         <canvas id="myCanvas" width="480" height="320">
             <script>
+            //maybe do a border up in the style tag (I couldn't figure it out though... blerg)
                 var canvas = document. getElementById("myCanvas");
                 var ctx = canvas.getContext("2d");
                 var x = canvas.width/2;
@@ -64,6 +65,14 @@
                 			ctx.fillStyle = "purple";
                 			ctx.fill();
                 			ctx.closePath();
+                		}
+                	}
+                }
+                function collisionDetection() {
+                	for(var c = 0; c < brickColumnCount; c++){
+                		for(var r = 0; r < brickRowCount; r++){
+                			var b = bricks[c][r];
+                			// Calculations
                 		}
                 	}
                 }
