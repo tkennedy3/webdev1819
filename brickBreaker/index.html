@@ -7,7 +7,6 @@
     <body>
         <canvas id="myCanvas" width="480" height="320">
             <script>
-            //maybe do a border up in the style tag (I couldn't figure it out though... blerg)
                 var canvas = document. getElementById("myCanvas");
                 var ctx = canvas.getContext("2d");
                 var x = canvas.width/2;
@@ -28,9 +27,20 @@
                 var brickPadding = 10;
                 var brickOffsetTop = 30;
                 var brickOffsetLeft = 30;
-                var brickX = (c*(brickWidth + brickPadding)) + brickOffsetLeft;
-                var brickY = (r*(brickHeight + brickPadding)) + brickOffsetTop;
                 var bricks = [];
+                var score = 0;
+                var lives = 3;
+                function drawScore(){
+                	ctx.font = '16px Arial';
+                	ctx.fillStyle = 'blue';
+                	ctx.fillText('Score: ' + score, 8, 20);
+                }
+            
+                function drawLives(){
+                    ctx.font = '16px Arial';
+                    ctx.fillStyle = 'blue';
+                	ctx.fillText('Lives: ' + lives, 400, 20);
+                }
                 for(var c = 0; c < brickColumnCount; c++){
                 	bricks[c] = [];
                 	for(var r = 0; r < brickRowCount;  r++){
@@ -51,47 +61,92 @@
                 	ctx.fill();
                     ctx.closePath();
                 }
-                function drawBricks() {
-                	for(var c = 0; c < brickColumnCount; c++){
-                		for(var r = 0; r < brickRowCount; r++){
-                			bricks[c][r].x = 0;
-                			bricks[c][r].y = 0;
-                			ctx.beginPath();
-                			ctx.rect(0, 0, brickWidth, brickHeight);
-                			ctx.fillStyle = "purple";
-                			ctx.fill();
-                			ctx.closePath();
-                		}
-                	}
+            function drawBricks() {
+                for(var c=0; c<brickColumnCount; c++) {
+                    for(var r=0; r<brickRowCount; r++) {
+                        
+                        if(bricks[c][r].status == 1) {
+                            var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
+                            var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
+                            bricks[c][r].x = brickX;
+                            bricks[c][r].y = brickY;
+                            ctx.beginPath();
+                            ctx.rect(brickX, brickY, brickWidth, brickHeight);
+                            ctx.fillStyle = "purple";
+                            ctx.fill();
+                            ctx.closePath();
+                        }
+                    }
                 }
-                function collisionDetection() {
-                	for(var c = 0; c < brickColumnCount; c++){
-                		for(var r = 0; r < brickRowCount; r++){
-                			var b = bricks[c][r];
-                			// Calculations
-                			if(x > brickX && x < brickX + brickWidth && y > brickY && y < brickY + brickHeight){
-                			    dy*(-dy);
-                			}
-                		}
-                	}
+            }
+            function collisionDetection() {
+                for(var c=0; c<brickColumnCount; c++) {
+                    for(var r=0; r<brickRowCount; r++) {
+                        var b = bricks[c][r];
+                        if(b.status > 0 ) {
+                            if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
+                                dy=-dy;
+                                b.status--;
+                                score=b.status==0 ? score+1 : score;
+                            }
+                        }
+                    }
                 }
+                if(score==bricks.length*bricks[0].length){
+                    dy=-dy
+                    alert("You Win");
+                }
+            }
                 function draw(){
+                    collisionDetection();
                 	ctx.clearRect(0, 0, canvas.width, canvas.height);
                 	x += dx;
                 	y += dy;
                 	drawBricks();
-                	if(y + dy < ballRadius){
-                    	dy = -dy;
-                    	ballColor = "red";
-                    } else if(y + dy > canvas.height - ballRadius) {
-                    	if(x > paddleX && x < paddleX + paddleWidth) {
-                    		dy = -dy;
-                    		ballColor = "purple"
-                    	}else{
-                    	    //alert("GAME OVER! Reload the page!");
-	                        document.location.reload();
+                	drawScore();
+                    drawLives();
+                if(x + dx > canvas.width - ballRadius || x + dx < ballRadius){
+	                dx = -dx;
+                }
+            	if(y + dy < ballRadius){
+                	dy = -dy;
+                } else if(y + dy > canvas.height - ballRadius) {
+                	if(x > paddleX && x < paddleX + paddleWidth) {
+                	    if(x>paddleX+paddleWidth/2){
+                	        if(x>paddleX+paddleWidth*.75){
+                	            dx=Math.abs(dx);
+                	        }
+                	        else{
+                	            dx= Math.abs(dx)<2 ?  2 : Math.abs(dx/2);
+                	        }
+                	    }
+                	    else if(x<paddleX+paddleWidth/2){
+                	        if(x<paddleX+paddleWidth*.25){
+                	            dx=-Math.abs(dx);
+                	        }
+                	        else{
+                	            dx= Math.abs(dx)<2 ?  -2 : -Math.abs(dx/2);
+                	        }
+                	    }
+                	    else if(x==(paddleX+paddleWidth)/2){
+                	        dx=0;
+                	    }
+                		dy = -dy;
+                	} 
+                	else{
+                	    dy= -dy;
+                		alert("Continue?");
+                    	x=canvas.width/2;
+                        y=canvas.height-30;
+                    	lives--;
+                    	if (lives < 0)
+                    	{
+                    	    alert("You ran out of lives");
+                    	    document.location.reload();
+                    	    
                     	}
-                    }
+                	}
+                }
                      if(x + dx > canvas.width - ballRadius || x + dx < ballRadius){
                     	dx = -dx;
                     	ballColor = "blue";
