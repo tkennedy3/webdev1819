@@ -1,0 +1,84 @@
+.overlay-image {
+ position: relative;
+ width: 100%;
+}
+/* Original image */
+.overlay-image .image {
+ display: block;
+ width: 50%;
+ height: auto;
+}
+/* Original text overlay */
+.overlay-image .text {
+ color: #fff;
+ font-size: 15px;
+ line-height: 1.5em;
+ text-align: left;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 100%;
+}
+.overlay-image #image3 {
+ color: #fff;
+ font-size: 15px;
+ line-height: 1.5em;
+ text-align: left;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 100%;
+}
+.image{
+  margin-left: 0px;
+}
+#container3{
+  background-image:url(images/dudeguy.jpg); 
+  background-size: cover; 
+  margin-left:0px; 
+  margin-right:0px;
+  width:100%;
+  height:100%;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+#container4{
+ margin-left:auto;
+ margin-right:auto;
+ width:100%;
+  height:100%;
+}
+#container5{
+ background-color:rgb(60,60,60);
+ width:100%;
+ color:white;
+}
+#title{
+ font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+#signIn{
+ background-color: rgba(0, 0, 0, 0.7);
+ color:white;
+ height:100%;
+}
+#top{
+ font-family:Verdana, Geneva, sans-serif
+}
+#next{
+ font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif
+}
+.button5 {
+ border-radius: 50%;
+ background-color:#228B22;
+   background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  float:right;
+}
